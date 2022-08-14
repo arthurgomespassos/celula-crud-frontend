@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+// Config
+@import 'scss/config';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+* {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--body);
+}
+
+app-home {
+  display: grid;
+  grid-template-rows: 3.7rem 1fr 1.5rem;
+  grid-template-areas:
+    'header header'
+    'main main'
+    'footer footer';
+}
+
+.main-content {
+  min-height: calc(100vh - 5.2rem);
+  grid-area: main;
+}
+
+app-header {
+  grid-area: header;
+}
+
+app-footer {
+  grid-area: footer;
+}

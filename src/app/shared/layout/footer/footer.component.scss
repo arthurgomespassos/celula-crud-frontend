@@ -1,0 +1,27 @@
+:host {
+  .footer {
+    height: 1.5rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2rem;
+
+    background-color: var(--primary);
+
+    &__text {
+      font-weight: 100;
+      font-size: 1.2rem;
+
+      .pi-heart,
+      .author {
+        color: var(--danger);
+        font-weight: 800;
+      }
+
+      .pi {
+        vertical-align: middle;
+      }
+    }
+  }
+}
