@@ -1,0 +1,12 @@
+:host {
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-container {
+      display: grid;
+      gap: 1.5rem;
+    }
+  }
+}

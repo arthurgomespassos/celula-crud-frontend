@@ -1,0 +1,78 @@
+<app-header></app-header>
+<main class="main-content">
+
+  <p-card>
+    <form [formGroup]="cityForm" (ngSubmit)="submitForm()">
+
+      <div class="p-fluid grid form-container">
+        <div class="field col-12 md:col-4">
+          <span class="p-float-label">
+            <input type="text" inputId="name" [(ngModel)]="city.name" pInputText formControlName="name">
+            <label for="name">Name</label>
+          </span>
+
+          <span *ngIf="fieldHasChangedAndHasAnError('name')">
+            <span class="input-error" *ngIf="cityForm.get('name')?.errors?.['required']">
+              Please add city name
+            </span>
+            <span class="input-error" *ngIf="cityForm.get('name')?.errors?.['pattern']">
+              Name field must have only letters and spaces
+            </span>
+            <span class="input-error" *ngIf="cityForm.get('name')?.errors?.['minlength']">
+              Name field must contain at least 3 characters
+            </span>
+            <span class="input-error" *ngIf="cityForm.get('name')?.errors?.['maxlength']">
+              Name field must not be longer than 30 characters
+            </span>
+          </span>
+        </div>
+
+        <div class="field col-12 md:col-4">
+          <span class="p-float-label">
+            <p-inputNumber type="number" inputId="population" [(ngModel)]="city.population"
+              formControlName="population"></p-inputNumber>
+            <label for="population">Population</label>
+          </span>
+
+          <span *ngIf="fieldHasChangedAndHasAnError('population')">
+            <span class="input-error" *ngIf="cityForm.get('population')?.errors?.['required']">
+              Please add amount of population
+            </span>
+            <span class="input-error" *ngIf="cityForm.get('population')?.errors?.['pattern']">
+              Population field must contain only numbers
+            </span>
+          </span>
+        </div>
+
+        <div class="field col-12 md:col-4">
+          <span class="p-float-label">
+            <input type="text" inputId="state" [(ngModel)]="city.state" pInputText formControlName="state">
+            <label for="state">State</label>
+          </span>
+
+          <span *ngIf="fieldHasChangedAndHasAnError('state')">
+            <span class="input-error" *ngIf="cityForm.get('state')?.errors?.['required']">
+              Please add city state
+            </span>
+            <span class="input-error" *ngIf="cityForm.get('state')?.errors?.['pattern']">
+              State field must have only letters and spaces
+            </span>
+            <span class="input-error" *ngIf="cityForm.get('state')?.errors?.['minlength']">
+              State field must contain at least 3 characters
+            </span>
+            <span class="input-error" *ngIf="cityForm.get('state')?.errors?.['maxlength']">
+              State field must not be longer than 30 characters
+            </span>
+          </span>
+        </div>
+
+        <div class="field col-12 md:col-4">
+          <p-button type="submit" label="Submit" [disabled]="cityForm.invalid"></p-button>
+        </div>
+      </div>
+
+    </form>
+  </p-card>
+
+</main>
+<app-footer></app-footer>

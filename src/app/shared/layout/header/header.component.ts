@@ -15,18 +15,18 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       {
-        label: 'User',
+        label: 'Person',
         icon: 'pi pi-user',
         items: [
           {
-            label: 'Add',
+            label: 'Create',
             icon: 'pi pi-plus',
-            routerLink: 'user/create'
+            routerLink: '/person/create'
           },
           {
             label: 'List',
             icon: 'pi pi-list',
-            routerLink: 'user/list'
+            routerLink: '/person/list'
           },
         ],
       },
@@ -35,14 +35,14 @@ export class HeaderComponent implements OnInit {
         icon: 'pi pi-map',
         items: [
           {
-            label: 'Add',
+            label: 'Create',
             icon: 'pi pi-plus',
-            routerLink: 'city/create'
+            routerLink: '/city/create'
           },
           {
             label: 'List',
             icon: 'pi pi-list',
-            routerLink: 'city/list'
+            routerLink: '/city/list'
           }
         ],
       },

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 // PrimeNG
 import { MenubarModule } from 'primeng/menubar';
 
@@ -15,7 +14,6 @@ import { FooterComponent } from './layout/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    // RouterModule,
     CommonModule,
     MenubarModule,
   ],
